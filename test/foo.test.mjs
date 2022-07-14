@@ -5,7 +5,7 @@ import chai from 'chai';
 chai.should();
 
 // subject imports
-import foo from '../src/foo.mjs';
+import { foo } from '../src/index.mjs';
 
 describe('foo', async () => {
   it('works', async () => {
