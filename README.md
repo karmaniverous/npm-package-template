@@ -26,3 +26,8 @@ these commands:
 npm run build
 npm run release
 ```
+
+## Integrating Template Updates
+
+Follow
+[these instructions](https://karmanivero.us/blog/installing-github-repo-template-updates/)
