@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "build": "rimraf ./lib && babel src -d lib",
+    "release": "dotenv -c -- release-it",
     "test": "mocha './{,!(node_modules)/**}/*.test.*js*'"
   },
   "repository": {
@@ -42,5 +43,14 @@
       "@babel/register"
     ],
     "spec": "./{,!(node_modules)/**}/*.test.*js*"
+  },
+  "release-it": {
+    "github": {
+      "release": true,
+      "update": true
+    },
+    "npm": {
+      "publish": false
+    }
   }
 }
