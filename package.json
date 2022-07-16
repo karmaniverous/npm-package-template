@@ -1,6 +1,6 @@
 {
   "name": "@karmaniverous/template-npm",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An ES6 NPM package project template featuring mocha/chai test support.",
   "main": "lib/index.js",
   "scripts": {
