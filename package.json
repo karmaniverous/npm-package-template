@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/karmaniverous/template-npm"
+    "url": "https://github.com/karmaniverous/npm-template"
   },
   "keywords": [],
   "author": "Jason G. Williscroft",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/karmaniverous/template-npm/issues"
+    "url": "https://github.com/karmaniverous/npm-template/issues"
   },
-  "homepage": "https://github.com/karmaniverous/template-npm#readme",
+  "homepage": "https://github.com/karmaniverous/npm-template#readme",
   "devDependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.20.5",
