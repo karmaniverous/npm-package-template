@@ -1,8 +1,9 @@
 {
-  "name": "@karmaniverous/template-npm",
+  "name": "@karmaniverous/npm-template",
   "version": "0.0.2",
-  "description": "An ES6 NPM package project template featuring mocha/chai test support.",
+  "description": "An ES6 NPM package project template featuring mocha/chai test support and a CLI.",
   "main": "lib/index.js",
+  "bin": "lib/cli.js",
   "scripts": {
     "build": "rimraf ./lib && babel src -d lib",
     "release": "dotenv -c development -- release-it",
@@ -52,5 +53,8 @@
     "npm": {
       "publish": false
     }
+  },
+  "dependencies": {
+    "commander": "^9.4.1"
   }
 }
