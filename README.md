@@ -58,61 +58,6 @@ npm-package-template -v
 # 0.2.0
 ```
 
-## Create Local Environment Variable Files
-
-Look for these files in your project directory:
-
-- `.env.local.template`
-- `.env.development.local.template`
-- `.env.production.local.template`
-
-Copy each of these files and remove the `template` extension from the copy.
-
-**Do not simply rename these files!** Anybody who pulls your repo will need
-these templates to create the same files in his own local environment.
-
-## Connect to GitHub
-
-This template supports automated release management with
-[`release-it`](https://github.com/release-it/release-it).
-
-If you use GitHub, create a
-[Personal Access Token](https://github.com/settings/tokens/new?scopes=repo&description=release-it)
-and add it as the value of `GITHUB_TOKEN` in `.env.local`.
-
-If you use GitLab, follow
-[these instructions](https://github.com/release-it/release-it#gitlab-releases)
-and place your token in the same file.
-
-For other release control systems, consult the
-[`release-it` README](https://github.com/release-it/release-it#readme).
-
-You can now create a release at GitHub and optionally publish it to NPM with
-this command:
-
-```
-npm run release
-```
-
-# Setting Up Your Dev Environment
-
-**Use [VS Code](https://code.visualstudio.com/) as your code editor!** Not an
-absolute requirement, but you'll be glad you did.
-
-1. [Click here](https://github.com/karmaniverous/nextjs-template/generate) to
-   generate a new repository from this template.
-
-1. Clone this repository to your local machine.
-
-1. VS Code will ask to install a bunch of recommended extensions. Accept all of
-   them.
-
-1. Install dependencies by running `npm install`.
-
-1. Start the development server by running `npm run dev`.
-
-1. Visit the web application at http://localhost:3000.
-
 ## Create Local Environment Variable File
 
 Look for these [`.env.local.template`](./.env.local.template) in your project
@@ -137,7 +82,8 @@ and place your token in the same file.
 For other release control systems, consult the
 [`release-it` README](https://github.com/release-it/release-it#readme).
 
-You can now publish a release to GitHub with this command:
+You can now create a release at GitHub and optionally publish it to NPM with
+this command:
 
 ```
 npm run release
