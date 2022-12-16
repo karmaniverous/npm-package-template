@@ -1,7 +1,7 @@
 {
   "name": "@karmaniverous/npm-package-template",
   "description": "An ES6 NPM package project template featuring mocha/chai test support and a CLI.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "publishConfig": {
     "access": "public"
   },
