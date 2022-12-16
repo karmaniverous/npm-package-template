@@ -3,8 +3,10 @@
 You wrote a sweet piece of code! Releasing it on [NPM](https://www.npmjs.com/)
 seems like the obvious next step. Right?
 
-Try it. Not as easy to do from scratch as you might think. So here's a
-plug-and-play NPM package template that offers the following features:
+Try it. Not as easy to do from scratch as you might think.
+
+So here's a plug-and-play NPM package template that offers the following
+features:
 
 - Support for the latest ES6 goodies with
   [`eslint`](https://www.npmjs.com/package/eslint) _uber alles_.
