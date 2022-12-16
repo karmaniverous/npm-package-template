@@ -40,6 +40,8 @@ absolute requirement, but you'll be glad you did.
 1. VS Code will ask to install a bunch of recommended extensions. Accept all of
    them.
 
+1. Set the version in [`package.json`](./package.json) to `0.0.0`.
+
 1. Install dependencies by running `npm install`.
 
 1. Build your package and link it locally by running:
