@@ -9,9 +9,10 @@
     "plugin:mocha/recommended",
     "plugin:promise/recommended"
   ],
-  "plugins": ["mocha", "promise"],
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module"
-  }
+  },
+  "plugins": ["mocha", "promise"]
 }
