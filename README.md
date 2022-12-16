@@ -51,14 +51,14 @@ absolute requirement, but you'll be glad you did.
 
 1. Assuming you haven't changed the package name in
    [`package.json`](./package.json), check your package version by running its
-   CLI:
+   CLI.
 
-```bash
-npm-package-template -v
+   ```bash
+   npm-package-template -v
 
-# Output looks like...
-# 0.2.0
-```
+   # Output looks like...
+   # 0.2.0
+   ```
 
 ## Create Local Environment Variable File
 
