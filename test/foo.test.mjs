@@ -7,15 +7,15 @@ chai.should();
 // subject imports
 import { foo } from '../src/index.mjs';
 
-describe('foo', async () => {
-  it('with input', async () => {
+describe('foo', function () {
+  it('with input', function () {
     const input = 'bar';
     const output = foo(input);
 
     output.should.equal(input);
   });
 
-  it('without input', async () => {
+  it('without input', function () {
     const output = foo();
 
     output.should.equal('nil');
