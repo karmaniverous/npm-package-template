@@ -8,10 +8,16 @@ chai.should();
 import { foo } from '../src/index.mjs';
 
 describe('foo', async () => {
-  it('works', async () => {
+  it('with input', async () => {
     const input = 'bar';
     const output = foo(input);
 
     output.should.equal(input);
+  });
+
+  it('without input', async () => {
+    const output = foo();
+
+    output.should.equal('nil');
   });
 });

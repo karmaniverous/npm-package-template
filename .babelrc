@@ -1,4 +1,4 @@
 {
   "presets": ["@babel/preset-env"],
-  "plugins": [["module-extension", { "mjs": "" }]]
+  "plugins": ["lodash", ["module-extension", { "mjs": "" }]]
 }
