@@ -210,7 +210,7 @@ with test running and status reporting controls.
 
 <img src="readme/testing-panel.png" width="600">
 
-## Integration Test Your Package
+## Integration-Test Your Package
 
 Generally, NPM packages are meant either to be included in other packages or to
 be invoked from the command line. This template supports both.
