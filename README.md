@@ -285,7 +285,7 @@ used by anyone. A
 can only be seen & used by your collaborators or other users with access to your
 organization scope.
 
-Only scoped packages can be private. Only paid accounts can create private NPM
+Only scoped packages can be private. Only paid NPM accounts can create private
 packages.
 
 Even if you are only creating public packages, it is a good idea to create
