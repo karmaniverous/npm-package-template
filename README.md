@@ -423,15 +423,17 @@ But you would find that the `import` statement is not valid for the `json` MIME
 type.
 
 This has been addressed with
-[_import assertions_](https://v8.dev/features/import-assertions), so that now
-you can write this:
+[_import assertions_](https://v8.dev/features/import-assertions), so now you can
+write this:
 
 ```js
 import pkg from './package.json' assert { type: 'json' };
 const { version } = pkg;
 ```
 
-This is new enough that [@babel/core](https://www.npmjs.com/package/@babel/core)
-doesn't support it yet. So this template includes
-[`@babel/plugin-syntax-import-assertions`], which adds support for this syntax
-to Babel.
+[@babel/core](https://www.npmjs.com/package/@babel/core) doesn't support this
+syntax yet, so while the statement above is valid, by default it would cause a
+build error.
+
+**This template includes [`@babel/plugin-syntax-import-assertions`], which adds
+support for import assertions to Babel.**
