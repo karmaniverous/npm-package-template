@@ -238,7 +238,22 @@ Run this command:
 npm run publish
 ```
 
-You will be asked to choose a release type.
+You will be asked to select a release increment. Otherwise accept all defaults.
+Your release will be generated on GitHub and published to NPM.
+
+Note that if you have configured Two-Factor Authentication at NPM you will be
+asked to enter a One-Time Password.
+
+Add other [`release-it`](https://github.com/release-it/release-it#readme)
+options after `--`. For example, to specify a patch release and accept all
+defaults with no user interaction, run this command:
+
+```bash
+npm run publish -- patch --ci
+```
+
+See the [`release-it` README](https://github.com/release-it/release-it#readme)
+for more info on available options.
 
 ## Integrate a Template Update
 
