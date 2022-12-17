@@ -191,7 +191,7 @@ By default, this template segregates unit tests into the [`test`](./test/)
 directory, but you don't have to do it that way. The default configuration will
 recognize any file as a test file that...
 
-- has a `.test.*js*` extension (i.e. `.test.js`, `.test.cjs`, `.test.mjs` &
+- has a `.test.*js*` extension (i.e. `.test.js`, `.test.cjs`, `.test.mjs`, or
   `.test.jsx`).
 - is not located in `node_modules`.
 
