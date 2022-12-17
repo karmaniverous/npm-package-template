@@ -388,7 +388,7 @@ Which is weird, right? Becuae
 for the latest ES6 goodies!_
 
 Meanwhile, your NPM package is only useful if it will run anywhere it needs to
-run. So the code you publish to NPM should be support the
+run. So the code you publish to NPM should support the
 lowest-common-denominator platform, meaning it _has_ to be a CommonJS package.
 
 We get there in two steps:
