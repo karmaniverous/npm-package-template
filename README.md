@@ -44,7 +44,7 @@ absolute requirement, but you'll be glad you did.
    1. Enter `@recommended` into the search box
    1. Click the Download link.
 
-    <img src="readme/recommended-extensions.png" width="250">
+      <img src="readme/recommended-extensions.png" width="250">
 
 1. Set the version in [`package.json`](./package.json) to `0.0.0`
 
@@ -65,7 +65,7 @@ absolute requirement, but you'll be glad you did.
    If you installed the VS Code extensions referenced above, use the `Testing`
    panel to visualize & run your unit tests.
 
-   <img src="readme/testing-panel.png" width="600">
+    <img src="readme/testing-panel.png" width="600">
 
 1. Build your package and link it locally by running:
 
