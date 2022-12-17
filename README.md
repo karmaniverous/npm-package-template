@@ -148,7 +148,7 @@ build will break.
 
 ## Develop Package CLI
 
-All custom CLI code lives in the [`src/cli`](./src/cli) directory. Structure the
+All custom command-line interface (CLI) code lives in the [`src/cli`](./src/cli) directory. Structure the
 contents of this directory however you like.
 
 The sample CLI is built using the very excellent
