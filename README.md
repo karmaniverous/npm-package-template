@@ -138,7 +138,16 @@ npm run release
 
 ## Pass `package.json` Data Into Environment Variables
 
-`TODO`
+This template uses
+[`babel-plugin-transform-inline-environment-variables`](https://www.npmjs.com/package/babel-plugin-transform-inline-environment-variables)
+to replace environment variable references in your code with string literals at
+build time.
+
+Currently it is pulling `version` from [`package.json`](./package.json) into
+`process.env.NODE_PACKAGE_VERSION`. The same technique will work for any value
+from a source you would rather not load at run time.
+
+To add more values, see the comments in [`babel.config.js`](./babel.config.js).
 
 ## Create & Publish a Release
 
