@@ -162,8 +162,8 @@ To add more values, see the comments in [`babel.config.js`](./babel.config.js).
 Generally, NPM packages are meant either to be included in other packages or to
 be invoked from the command line. This template supports both.
 
-To build your package and add it directly to your development as a global
-package, WITHOUT publishing it first to NPM, run these commands:
+To build your package and add it directly to your local development environment
+as a global package, WITHOUT publishing it first to NPM, run these commands:
 
 ```bash
 npm run build
@@ -182,8 +182,8 @@ const myTemplate = require('@karmaniverous/npm-package-template'); // default ex
 const { foo } = require('@karmaniverous/npm-package-template'); // named export
 ```
 
-You can also invoke your package's CLI from the command line like any other
-global package with a CLI:
+You can also invoke your package's CLI from the command line, just like any
+other global package with a CLI:
 
 ```bash
 npm-package-template
