@@ -242,10 +242,12 @@ to set up an NPM account.
 Your NPM user name is a _scope_. If you create an organization, its unique
 organization name is also a scope.
 
-_Unscoped_ packages have names like `lodash`. An unscoped package name must be
-unique across NPM.
+_Unscoped_ packages have names like
+[`lodash`](https://www.npmjs.com/package/lodash). An unscoped package name must
+be unique across NPM.
 
-_Scoped_ packages have names like `@karmaniverous/npm-package-template`.
+_Scoped_ packages have names like
+[`@karmaniverous/serify-deserify`](https://www.npmjs.com/package/@karmaniverous/serify-deserify).
 `@karmaniverous` in this case is the scope. A scoped package name only needs to
 be unique within its scope.
 
