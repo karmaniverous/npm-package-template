@@ -38,11 +38,34 @@ absolute requirement, but you'll be glad you did.
 1. Clone the new repository to your local machine.
 
 1. VS Code will ask to install a bunch of recommended extensions. Accept all of
-   them.
+   them. If you miss this prompt, follow these steps:
 
-1. Set the version in [`package.json`](./package.json) to `0.0.0`.
+   1. Open the VS Code Extensions tab
+   1. Enter `@recommended` into the search box
+   1. Click the Download link.
+
+    <img src="readme/recommended-extensions.png" width="250">
+
+1. Set the version in [`package.json`](./package.json) to `0.0.0`
 
 1. Install dependencies by running `npm install`.
+
+1. Run your tests drom the command line:
+
+   ```bash
+   npm run test
+
+   #  foo
+   #    ✔ with input
+   #    ✔ without input
+   #
+   #  2 passing (5ms)
+   ```
+
+   If you installed the VS Code extensions referenced above, use the `Testing`
+   panel to visualize & run your unit tests.
+
+   <img src="readme/testing-panel.png" width="600">
 
 1. Build your package and link it locally by running:
 
@@ -52,14 +75,20 @@ absolute requirement, but you'll be glad you did.
    ```
 
 1. Assuming you haven't changed the package name in
-   [`package.json`](./package.json), check your package version by running its
-   CLI.
+   [`package.json`](./package.json), enter a few of its CLI commands:
 
    ```bash
+   npm-package-template
+
+   # foo nil!
+
+   npm-package-template -f b
+
+   # foo bar!
+
    npm-package-template -v
 
-   # Output looks like...
-   # 0.2.0
+   # 0.0.0
    ```
 
 ## Create Local Environment Variable File
