@@ -348,3 +348,13 @@ for more info on available options.
 
 Follow
 [these instructions](https://karmanivero.us/blog/installing-github-repo-template-updates/).
+
+# FAQ
+
+## Why do most of your source files have an `.mjs` extension?
+
+`TODO`
+
+## How do I import a `.json` file into an ES6 module?
+
+`TODO`
