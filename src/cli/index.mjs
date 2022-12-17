@@ -3,7 +3,7 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
-import foo from './foo.mjs';
+import { foo } from '../export/index.mjs';
 
 import { program } from 'commander';
 

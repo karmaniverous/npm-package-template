@@ -24,7 +24,7 @@
     "release"
   ],
   "license": "BSD-3-Clause",
-  "bin": "lib/cli.js",
+  "bin": "lib/cli/index.js",
   "dependencies": {
     "commander": "^9.4.1",
     "dotenv": "^16.0.3",
@@ -51,7 +51,7 @@
     "release-it": "^15.5.1",
     "rimraf": "^3.0.2"
   },
-  "main": "lib/index.js",
+  "main": "lib/export/index.js",
   "mocha": {
     "require": [
       "@babel/register"
