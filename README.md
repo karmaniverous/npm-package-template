@@ -91,6 +91,12 @@ absolute requirement, but you'll be glad you did.
    # 0.0.0
    ```
 
+1. Clean up by unlinking your package.
+
+   ```bash
+   npm unlink -g npm-package-template
+   ```
+
 ## Create Local Environment Variable File
 
 Look for these [`.env.local.template`](./.env.local.template) in your project
