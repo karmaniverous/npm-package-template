@@ -1,21 +1,19 @@
 {
   "name": "@karmaniverous/npm-package-template",
-  "description": "An ES6 NPM package project template featuring mocha/chai test support and a CLI.",
-  "version": "0.2.2",
-  "publishConfig": {
-    "access": "public"
-  },
-  "main": "lib/index.js",
-  "bin": "lib/cli.js",
-  "scripts": {
-    "build": "rimraf ./lib && babel src -d lib",
-    "release": "npx dotenv -c -- release-it",
-    "test": "mocha"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/karmaniverous/npm-package-template"
   },
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.2.2",
+  "author": "Jason G. Williscroft",
+  "bugs": {
+    "url": "https://github.com/karmaniverous/npm-package-template/issues"
+  },
+  "description": "An ES6 NPM package project template featuring mocha/chai test support and a CLI.",
+  "homepage": "https://github.com/karmaniverous/npm-package-template#readme",
   "keywords": [
     "testing",
     "template",
@@ -25,12 +23,13 @@
     "chai",
     "release"
   ],
-  "author": "Jason G. Williscroft",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/karmaniverous/npm-package-template/issues"
+  "bin": "lib/cli.js",
+  "dependencies": {
+    "commander": "^9.4.1",
+    "dotenv": "^16.0.3",
+    "lodash": "^4.17.21"
   },
-  "homepage": "https://github.com/karmaniverous/npm-package-template#readme",
   "devDependencies": {
     "@babel/cli": "^7.19.3",
     "@babel/core": "^7.20.5",
@@ -52,6 +51,7 @@
     "release-it": "^15.5.1",
     "rimraf": "^3.0.2"
   },
+  "main": "lib/index.js",
   "mocha": {
     "require": [
       "@babel/register"
@@ -66,9 +66,9 @@
       "publish": true
     }
   },
-  "dependencies": {
-    "commander": "^9.4.1",
-    "dotenv": "^16.0.3",
-    "lodash": "^4.17.21"
+  "scripts": {
+    "build": "rimraf ./lib && babel src -d lib",
+    "release": "npx dotenv -c -- release-it",
+    "test": "mocha"
   }
 }
