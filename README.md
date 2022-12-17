@@ -158,7 +158,7 @@ whatever you want.
 The only constraint:
 
 - [`src/cli/index.mjs`](src/cli/index.mjs) is the execution point of your CLI.
-  Do not move or remame this file or your build will break.
+  Do not move or rename this file or your build will break.
 
 - [`src/cli/index.mjs`](src/cli/index.mjs) must begin with the following line:
 
