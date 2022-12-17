@@ -23,7 +23,7 @@
     "chai",
     "release"
   ],
-  "license": "ISC",
+  "license": "BSD-3-Clause",
   "bin": "lib/cli.js",
   "dependencies": {
     "commander": "^9.4.1",
