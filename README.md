@@ -181,7 +181,34 @@ To add more values, see the comments in [`babel.config.js`](./babel.config.js).
 
 ## Create & Run Unit Tests
 
-`TODO`
+By default, this template supports
+[`mocha`](https://www.npmjs.com/package/mocha) tests using the
+[`chai`](https://www.npmjs.com/package/chai) assertion library. The included
+sample tests express the [`should`](https://www.chaijs.com/guide/styles/#should)
+assertion syntax.
+
+By default, this template segregates unit tests into the [`test`](./test/)
+directory, but you don't have to do it that way. The default configuration will
+recognize any file as a test file that...
+
+- has a `.test.*js*` extension (i.e. `.test.js`, `.test.cjs`, `.test.mjs` &
+  `.test.jsx`).
+- is not located in `node_modules`.
+
+To enable `mocha`-specific linting in your test files, add the following
+directive at the top of every test file:
+
+```js
+/* eslint-env mocha */
+```
+
+The recommended
+[Mocha Test Explorer](https://marketplace.visualstudio.com/items?itemName=hbenl.vscode-mocha-test-adapter)
+extension will suface all of your tests into a sidebar console, nested to
+reflect your `describe` hierarchy. It will also decorate your test source code
+with test running and status reporting controls.
+
+<img src="readme/testing-panel.png" width="600">
 
 ## Integration Test Your Package
 
