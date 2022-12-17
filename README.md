@@ -143,7 +143,7 @@ own source and organize your exports however you like. You can even
 [re-export](https://jamesknelson.com/re-exporting-es6-modules/) imports from
 other packages!
 
-Do not move or rename ['src/export/index.mjs`](src/export/index.mjs) or your
+Do not move or rename [`src/export/index.mjs`](src/export/index.mjs) or your
 build will break.
 
 ## Develop Package CLI
