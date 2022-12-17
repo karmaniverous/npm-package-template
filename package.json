@@ -1,13 +1,13 @@
 {
   "name": "@karmaniverous/npm-package-template",
+  "version": "0.2.2",
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/karmaniverous/npm-package-template"
   },
-  "publishConfig": {
-    "access": "public"
-  },
-  "version": "0.2.2",
   "author": "Jason G. Williscroft",
   "bugs": {
     "url": "https://github.com/karmaniverous/npm-package-template/issues"

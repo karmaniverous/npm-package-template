@@ -32,70 +32,72 @@ instead!
 **Use [VS Code](https://code.visualstudio.com/) as your code editor!** Not an
 absolute requirement, but you'll be glad you did.
 
-1. [Click here](https://github.com/karmaniverous/npm-package-template/generate)
-   to generate a new repository from this template.
+1.  [Click here](https://github.com/karmaniverous/npm-package-template/generate)
+    to generate a new repository from this template.
 
-1. Clone the new repository to your local machine.
+1.  Clone the new repository to your local machine.
 
-1. VS Code will ask to install a bunch of recommended extensions. Accept all of
-   them. If you miss this prompt, follow these steps:
+1.  VS Code will ask to install a bunch of recommended extensions. Accept all of
+    them. If you miss this prompt, follow these steps:
 
-   1. Open the VS Code Extensions tab
-   1. Enter `@recommended` into the search box
-   1. Click the Download link.
+    1. Open the VS Code Extensions tab
+    1. Enter `@recommended` into the search box
+    1. Click the Download link.
 
-      <img src="readme/recommended-extensions.png" width="250">
+       <img src="readme/recommended-extensions.png" width="250">
 
-1. Set the version in [`package.json`](./package.json) to `0.0.0`
+1.  Set the version in [`package.json`](./package.json) to `0.0.0`.
 
-1. Install dependencies by running `npm install`.
+    See [Configuring `package.json`](#configuring-packagejson) for info on the
+    rest of these settings.
 
-1. Run your tests from the command line:
+1.  Install dependencies by running `npm install`.
 
-   ```bash
-   npm run test
+1.  Run your tests from the command line:
 
-   #  foo
-   #    ✔ with input
-   #    ✔ without input
-   #
-   #  2 passing (5ms)
-   ```
+    ```bash
+    npm run test
 
-   If you installed the VS Code extensions referenced above, use the `Testing`
-   panel to visualize & run your unit tests.
+    #  foo
+    #    ✔ with input
+    #    ✔ without input
+    #
+    #  2 passing (5ms)
+    ```
 
-    <img src="readme/testing-panel.png" width="600">
+    If you installed the VS Code extensions referenced above, use the `Testing`
+    panel to visualize & run your unit tests.
 
-1. Build your package and link it locally by running:
+     <img src="readme/testing-panel.png" width="600">
 
-   ```bash
-   npm run build
-   npm link
-   ```
+1.  Build your package and link it locally by running:
 
-1. Assuming you haven't changed the package name in
-   [`package.json`](./package.json), enter a few of its CLI commands:
+    ```bash
+    npm run build
+    npm link
+    ```
 
-   ```bash
-   npm-package-template
+1.  Enter a few of your package CLI commands:
 
-   # foo nil!
+    ```bash
+    npm-package-template
 
-   npm-package-template -f b
+    # foo nil!
 
-   # foo bar!
+    npm-package-template -f b
 
-   npm-package-template -v
+    # foo bar!
 
-   # 0.0.0
-   ```
+    npm-package-template -v
 
-1. Clean up by unlinking your package.
+    # 0.0.0
+    ```
 
-   ```bash
-   npm unlink -g npm-package-template
-   ```
+1.  Clean up by unlinking your package.
+
+    ```bash
+    npm unlink -g @karmaniverous/npm-package-template
+    ```
 
 ## Create Local Environment Variable File
 
@@ -157,7 +159,86 @@ To add more values, see the comments in [`babel.config.js`](./babel.config.js).
 
 ## Create & Publish a Release
 
-`TODO`
+Before you can publish a package to [NPM](https://www.npmjs.com/), you'll need
+to set up an NPM account.
+
+### Package Visibility & Scope
+
+Your NPM user name is a _scope_. If you create an organization, its unique
+organization name is also a scope.
+
+_Unscoped_ packages have names like `lodash`. An unscoped package name must be
+unique across NPM.
+
+_Scoped_ packages have names like `@karmaniverous/npm-package-template`.
+`@karmaniverous` in this case is the scope. A scoped package name only needs to
+be unique within its scope.
+
+NPM packages may be _public_ or _private_. A public package can be seen and used
+by anyone. A private package can only be seen & used by designated users or
+other users in its scope.
+
+Only scoped packages can be private. Only paid accounts can create private NPM
+packages.
+
+Even if you are only creating public packages, it is a good idea to create
+_scoped_ packages because it groups them logically and gives you much more
+flexibility in naming them.
+
+### Configuring `package.json`
+
+When you publish an NPM package, NPM gets most of its info from your
+[`package.json`](./package.json) file.
+
+Set the following values in [`package.json`](./package.json), using the template
+file as an example.
+
+This info is critical. You can't publish your package properly without it:
+
+- `name` – The desired package name on NPM. Include scope if relevant.
+
+- `version` - Your package version. Uses
+  [semantic versioning](https://www.geeksforgeeks.org/introduction-semantic-versioning/).
+  Set this initially to `0.0.0` and the template's
+  [release process](#create--publish-a-release) will manage it from there.
+
+- `publishConfig.access` - `restricted` for private packages, otherwise
+  `public`.
+
+- `repository.url` - GitHub repository URL.
+
+This info is important but you can always update it in the next release:
+
+- `author` - Your name, however you'd like it to appear.
+
+- `bugs.url` - A URL for users to report bugs. By default, use the
+  [issues page](https://github.com/karmaniverous/npm-package-template/issues) of
+  your GitHub repo.
+
+- `description` - A text description of your package. Will be used as the META
+  description of your NPM package page, so keep it under 160 chars.
+
+- `homepage` - The main web page of your project. By default, use your GitHub
+  repo's
+  [README link](https://github.com/karmaniverous/npm-package-template#readme).
+
+- `keywords` - An array of strings that will appear as tags on the NPM package
+  page.
+
+- `license` - The license associated with your package. See this list of
+  [valid license identifiers](https://spdx.org/licenses/).
+
+### Generating the Release
+
+Before you begin, ensure you have committed all changes to your working branch.
+
+Run this command:
+
+```bash
+npm run publish
+```
+
+You will be asked to choose a release type.
 
 ## Integrate a Template Update
 
