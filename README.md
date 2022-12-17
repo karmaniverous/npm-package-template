@@ -155,7 +155,7 @@ The sample CLI is built using the very excellent
 [`commander`](https://www.npmjs.com/package/commander) package, but you can use
 whatever you want.
 
-The only constraint:
+The only constraints:
 
 - [`src/cli/index.mjs`](src/cli/index.mjs) is the execution point of your CLI.
   Do not move or rename this file or your build will break.
