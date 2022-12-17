@@ -140,10 +140,6 @@ npm run release
 
 `TODO`
 
-## Create & Run Unit Tests
-
-`TODO`
-
 ## Pass `package.json` Data Into Environment Variables
 
 This template uses
@@ -156,6 +152,59 @@ Currently it is pulling `version` from [`package.json`](./package.json) into
 from a source you would rather not load at run time.
 
 To add more values, see the comments in [`babel.config.js`](./babel.config.js).
+
+## Create & Run Unit Tests
+
+`TODO`
+
+## Integration Test Your Package
+
+Generally, NPM packages are meant either to be included in other packages or to
+be invoked from the command line. This template supports both.
+
+To build your package and add it directly to your development as a global
+package, WITHOUT publishing it first to NPM, run these commands:
+
+```bash
+npm run build
+npm link
+```
+
+You can now import your package into a JS module in any other package like this:
+
+```js
+// ES6
+import myTemplate from '@karmaniverous/npm-package-template'; // default export
+import { foo } from '@karmaniverous/npm-package-template'; // named export
+
+// CommonJS
+const myTemplate = require('@karmaniverous/npm-package-template'); // default export
+const { foo } = require('@karmaniverous/npm-package-template'); // named export
+```
+
+You can also invoke your package's CLI from the command line like any other
+global package with a CLI:
+
+```bash
+npm-package-template
+
+# foo nil!
+
+npm-package-template -f b
+
+# foo bar!
+
+npm-package-template -v
+
+# 0.0.0
+```
+
+When you're finished, clean up your global environment by unlinking your
+package:
+
+```bash
+npm unlink -g @karmaniverous/npm-package-template
+```
 
 ## Create & Publish a Release
 
