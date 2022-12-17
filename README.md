@@ -235,21 +235,26 @@ Before you begin, ensure you have committed all changes to your working branch.
 Run this command:
 
 ```bash
-npm run publish
+npm run release
 ```
 
 You will be asked to select a release increment. Otherwise accept all defaults.
 Your release will be generated on GitHub and published to NPM.
 
 Note that if you have configured Two-Factor Authentication at NPM you will be
-asked to enter a One-Time Password.
+asked to enter a One-Time Password (OTP).
 
 Add other [`release-it`](https://github.com/release-it/release-it#readme)
-options after `--`. For example, to specify a patch release and accept all
-defaults with no user interaction, run this command:
+options after `---` (Windows) or `--` (Mac/Linux). For example, to specify a
+patch release, and accept all defaults with no user interaction, run this
+command:
 
 ```bash
-npm run publish -- patch --ci
+# Windows only.
+npm run release --- patch --ci
+
+# Mac/Linux.
+npm run release -- patch --ci
 ```
 
 See the [`release-it` README](https://github.com/release-it/release-it#readme)
