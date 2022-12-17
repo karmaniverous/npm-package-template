@@ -403,4 +403,35 @@ We get there in two steps:
 
 ## How do I import a `.json` file into an ES6 module?
 
-`TODO`
+CommonJS allows you to `require` a `.json` file directly into a JavaScript
+object, as in
+[this example from `babel.config.js`](https://github.com/karmaniverous/npm-package-template/blob/3b63de057330fbe47e49645cb0bc735c59683100/babel.config.js#L1-L2):
+
+```js
+const { version } = require('./package.json');
+```
+
+The `require` function is not valid in ES6. You might consider doing this
+instead...
+
+```js
+import pkg from './package.json';
+const { version } = pkg;
+```
+
+But you would find that the `import` statement is not valid for the `json` MIME
+type.
+
+This has been addressed with
+[_import assertions_](https://v8.dev/features/import-assertions), so that now
+you can write this:
+
+```js
+import pkg from './package.json' assert { type: 'json' };
+const { version } = pkg;
+```
+
+This is new enough that [@babel/core](https://www.npmjs.com/package/@babel/core)
+doesn't support it yet. So this template includes
+[`@babel/plugin-syntax-import-assertions`], which adds support for this syntax
+to Babel.
