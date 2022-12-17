@@ -237,10 +237,10 @@ npm unlink -g @karmaniverous/npm-package-template
 Before you can publish a package to [NPM](https://www.npmjs.com/), you'll need
 to set up an NPM account.
 
-### Package Visibility & Scope
+### Package Scope & Access
 
-Your NPM user name is a _scope_. If you create an organization, its unique
-organization name is also a scope.
+Your NPM user name is a [_scope_](https://docs.npmjs.com/about-scopes). If you
+create an organization, its unique organization name is also a scope.
 
 _Unscoped_ packages have names like
 [`lodash`](https://www.npmjs.com/package/lodash). An unscoped package name must
@@ -251,9 +251,12 @@ _Scoped_ packages have names like
 `@karmaniverous` in this case is the scope. A scoped package name only needs to
 be unique within its scope.
 
-NPM packages may be _public_ or _private_. A public package can be seen and used
-by anyone. A private package can only be seen & used by designated users or
-other users in its scope.
+NPM packages may be _public_ or _private_. A
+[public package](https://docs.npmjs.com/about-public-packages) can be seen and
+used by anyone. A
+[private package](https://www.npmjs.com/package/@karmaniverous/serify-deserify)
+can only be seen & used by your collaborators or other users with access to your
+organization scope.
 
 Only scoped packages can be private. Only paid accounts can create private NPM
 packages.
@@ -261,6 +264,9 @@ packages.
 Even if you are only creating public packages, it is a good idea to create
 _scoped_ packages because it groups them logically and gives you much more
 flexibility in naming them.
+
+[Click here](https://docs.npmjs.com/packages-and-modules/introduction-to-packages-and-modules)
+for more info about NPM package scope & access.
 
 ### Configuring `package.json`
 
@@ -272,7 +278,8 @@ file as an example.
 
 This info is critical. You can't publish your package properly without it:
 
-- `name` – The desired package name on NPM. Include scope if relevant.
+- `name` – The desired package name on NPM. Include scope if relevant. See
+  [Package Scope & Access](#package-scope--access) for more info.
 
 - `version` - Your package version. Uses
   [semantic versioning](https://www.geeksforgeeks.org/introduction-semantic-versioning/).
@@ -280,7 +287,7 @@ This info is critical. You can't publish your package properly without it:
   [release process](#create--publish-a-release) will manage it from there.
 
 - `publishConfig.access` - `restricted` for private packages, otherwise
-  `public`.
+  `public`. See [Package Scope & Access](#package-scope--access) for more info.
 
 - `repository.url` - GitHub repository URL.
 
