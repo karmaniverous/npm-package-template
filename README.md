@@ -380,7 +380,26 @@ Follow
 
 ## Why do most of your source files have an `.mjs` extension?
 
-`TODO`
+Because this template is a
+[CommonJS package](https://nodejs.org/api/packages.html#type)!
+
+Which is weird, right? Becuae
+[right at the top of this document](#npm-package-template) we demanded _support
+for the latest ES6 goodies!_
+
+Meanwhile, your NPM package is only useful if it will run anywhere it needs to
+run. So the code you publish to NPM should be support the
+lowest-common-denominator platform, meaning it _has_ to be a CommonJS package.
+
+We get there in two steps:
+
+1. Compose our fancy ES6 code in `.mjs` files in the [`src`](./src/) directory.
+   This is what we push to GitHub.
+
+1. Invoke [`babel`](https://babeljs.io/) via `npm run build` to transpile the
+   ES6 contents of the [`src`](./src/) directory into `.js` files in the `lib`
+   directory. This directory does NOT get pushed to GitHub... but it DOES get
+   published to NPM!
 
 ## How do I import a `.json` file into an ES6 module?
 
