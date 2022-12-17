@@ -148,7 +148,23 @@ build will break.
 
 ## Develop Package CLI
 
-`TODO`
+All custom CLI code lives in the [`src/cli`](./src/cli) directory. Structure the
+contents of this directory however you like.
+
+The sample CLI is built using the very excellent
+[`commander`](https://www.npmjs.com/package/commander) package, but you can use
+whatever you want.
+
+The only constraint:
+
+- ['src/cli/index.mjs`](src/cli/index.mjs) is the execution point of your CLI.
+  Do not move or remame this file or your build will break.
+
+- ['src/cli/index.mjs`](src/cli/index.mjs) must begin with the following line:
+
+  ```js
+  #!/usr/bin/env node
+  ```
 
 ## Pass `package.json` Data Into Environment Variables
 
