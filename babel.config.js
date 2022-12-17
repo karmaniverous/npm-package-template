@@ -1,3 +1,4 @@
+// Load data from package.json.
 const { version } = require('./package.json');
 
 // Create environment variables from sources it might be undesirable to expose
