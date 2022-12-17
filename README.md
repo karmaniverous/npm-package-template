@@ -435,5 +435,6 @@ const { version } = pkg;
 syntax yet, so while the statement above is valid, by default it would cause a
 build error.
 
-**This template includes [`@babel/plugin-syntax-import-assertions`], which adds
-support for import assertions to Babel.**
+**This template includes
+[`@babel/plugin-syntax-import-assertions`](https://www.npmjs.com/package/@babel/plugin-syntax-import-assertions),
+which adds support for import assertions to Babel.**
