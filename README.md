@@ -50,7 +50,7 @@ absolute requirement, but you'll be glad you did.
 
 1. Install dependencies by running `npm install`.
 
-1. Run your tests drom the command line:
+1. Run your tests from the command line:
 
    ```bash
    npm run test
