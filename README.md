@@ -138,7 +138,7 @@ All custom package code lives in the [`src/export`](./src/export) directory.
 Structure the contents of this directory however you like.
 
 All package exports come together in
-['src/export/index.mjs`](src/export/index.mjs). You can cherry-pick from your
+[`src/export/index.mjs`](src/export/index.mjs). You can cherry-pick from your
 own source and organize your exports however you like. You can even
 [re-export](https://jamesknelson.com/re-exporting-es6-modules/) imports from
 other packages!
