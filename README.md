@@ -84,7 +84,7 @@ absolute requirement, but you'll be glad you did.
 
     # foo nil!
 
-    npm-package-template -f b
+    npm-package-template -f bar
 
     # foo bar!
 
@@ -101,7 +101,7 @@ absolute requirement, but you'll be glad you did.
 
 ## Create Local Environment Variable File
 
-Look for these [`.env.local.template`](./.env.local.template) in your project
+Look for [`.env.local.template`](./.env.local.template) in your project
 directory. Copy this file and remove the `.template` extension from the copy.
 
 **Do not simply rename this file!** Anybody who pulls your repo will need this
