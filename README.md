@@ -188,17 +188,17 @@ By default, this template supports
 sample tests express the [`should`](https://www.chaijs.com/guide/styles/#should)
 assertion syntax.
 
-This template filters tests out of the build if they are located in the
-[`src`](./src/) directory. The default configuration will recognize any file as
-a test file that...
+The default configuration will recognize any file as a test file that...
 
-- has a `.test.*js*` extension (i.e. `.test.js`, `.test.cjs`, `.test.mjs`, or
-  `.test.jsx`).
+- has a `.test.*js*` extension (i.e. `.test.cjs`, `.test.js`, `.test.mjs`, or
+  `.test.ts`).
 - is not located in `node_modules`.
 
-The sample code packages tests next to source code they exercise. If you prefer
-to segregate your tests into a directory outside [`src`](./src/) (e.g. `test`),
-that will work as well.
+The sample code packages tests next to the source code they exercise. If you
+prefer to segregate your tests into a directory outside [`src`](./src/) (e.g.
+`test`), that will work as well.
+
+Either way, all test files will be excluded from the build.
 
 To enable `mocha`-specific linting in your test files, add the following
 directive at the top of every test file:
