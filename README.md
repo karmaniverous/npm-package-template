@@ -188,13 +188,17 @@ By default, this template supports
 sample tests express the [`should`](https://www.chaijs.com/guide/styles/#should)
 assertion syntax.
 
-By default, this template segregates unit tests into the [`test`](./test/)
-directory, but you don't have to do it that way. The default configuration will
-recognize any file as a test file that...
+This template filters tests out of the build if they are located in the
+[`src`](./src/) directory. The default configuration will recognize any file as
+a test file that...
 
 - has a `.test.*js*` extension (i.e. `.test.js`, `.test.cjs`, `.test.mjs`, or
   `.test.jsx`).
 - is not located in `node_modules`.
+
+The sample code packages tests next to source code they exercise. If you prefer
+to segregate your tests into a directory outside [`src`](./src/) (e.g. `test`),
+that will work as well.
 
 To enable `mocha`-specific linting in your test files, add the following
 directive at the top of every test file:
