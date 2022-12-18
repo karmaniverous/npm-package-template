@@ -142,6 +142,16 @@ this command:
 npm run release
 ```
 
+# NPM Scripts
+
+| Script            |                                                                               |
+| ----------------- | ----------------------------------------------------------------------------- |
+| `npm run test`    | Runs all unit tests from the command line.                                    |
+| `npm run build`   | Builds the project into the `lib` directory.                                  |
+| `npm run doc`     | Builds the README file from the `doc` directory.                              |
+| `npm run package` | Runs `test`, `build`, and `doc` to exercise your full packaging process.      |
+| `npm run release` | Packages your code, creates a GitHub release, and publishes your code to NPM. |
+
 # Common Tasks
 
 ## Develop Package Exports
