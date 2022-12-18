@@ -236,6 +236,14 @@ with test running and status reporting controls.
 
 <img src="readme/testing-panel.png" width="600">
 
+## Test Your Build
+
+`TODO`
+
+## Generate Documentation
+
+`TODO`
+
 ## Integration-Test Your Package
 
 Generally, NPM packages are meant either to be included in other packages or to
@@ -245,7 +253,7 @@ To build your package and add it directly to your local development environment
 as a global package, WITHOUT publishing it first to NPM, run these commands:
 
 ```bash
-npm run build
+npm run package
 npm link
 ```
 
