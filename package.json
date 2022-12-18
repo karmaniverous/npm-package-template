@@ -53,14 +53,14 @@
   },
   "main": "lib/export/index.js",
   "mocha": {
-    "ignore": [
+    "exclude": [
       "./lib/**",
       "./node_modules/**"
     ],
     "require": [
       "@babel/register"
     ],
-    "spec": "**/*.test.!(*.*)"
+    "spec": "./**/*.test.!(*.*)"
   },
   "release-it": {
     "github": {
