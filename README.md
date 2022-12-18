@@ -114,7 +114,8 @@ This template supports automated release management with
 
 If you use GitHub, create a
 [Personal Access Token](https://github.com/settings/tokens/new?scopes=repo&description=release-it)
-and add it as the value of `GITHUB_TOKEN` in `.env.local`.
+(`release-it` only needs "repo" access; no "admin" or other scopes). Add it as
+the value of `GITHUB_TOKEN` in `.env.local`.
 
 If you use GitLab, follow
 [these instructions](https://github.com/release-it/release-it#gitlab-releases)
@@ -148,8 +149,8 @@ build will break.
 
 ## Develop Package CLI
 
-All custom command-line interface (CLI) code lives in the [`src/cli`](./src/cli) directory. Structure the
-contents of this directory however you like.
+All custom command-line interface (CLI) code lives in the [`src/cli`](./src/cli)
+directory. Structure the contents of this directory however you like.
 
 The sample CLI is built using the very excellent
 [`commander`](https://www.npmjs.com/package/commander) package, but you can use
@@ -404,8 +405,8 @@ Which is weird, right? Becuae
 for the latest ES6 goodies!_
 
 Meanwhile, your NPM package is only useful if it will run anywhere it needs to
-run. So the code you publish to NPM should support the
-lowest-common-denominator platform, meaning it _has_ to be a CommonJS package.
+run. So the code you publish to NPM should support the lowest-common-denominator
+platform, meaning it _has_ to be a CommonJS package.
 
 We get there in two steps:
 
