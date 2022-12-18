@@ -10,16 +10,22 @@ features:
 
 - Support for the latest ES6 goodies with
   [`eslint`](https://www.npmjs.com/package/eslint) _uber alles_.
+
 - A command line interface for your widget with
   [`commander`](https://www.npmjs.com/package/commander).
+
 - Automated [`lodash`](https://www.npmjs.com/package/lodash) cherry-picking with
   [`babel-plugin-lodash`](https://www.npmjs.com/package/babel-plugin-lodash).
+
 - [`mocha`](https://www.npmjs.com/package/mocha) &
   [`chai`](https://www.npmjs.com/package/chai) for testing, with examples, and a
   sweet testing console.
+
 - Secure environment-variable access to [`package.json`](./package.json) data.
+
 - Code formatting at every save & paste with
   [`prettier`](https://www.npmjs.com/package/prettier).
+
 - One-button release to GitHub & publish to NPM with
   [`release-it`](https://www.npmjs.com/package/release-it).
 
