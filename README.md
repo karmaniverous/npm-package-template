@@ -26,6 +26,11 @@ features:
 - Code formatting at every save & paste with
   [`prettier`](https://www.npmjs.com/package/prettier).
 
+- Automated documentation of your API with
+  [`jsdoc-to-markdown`](https://www.npmjs.com/package/jsdoc-to-markdown) and
+  assembly of your README with
+  [`concat-md`](https://www.npmjs.com/package/concat-md).
+
 - One-button release to GitHub & publish to NPM with
   [`release-it`](https://www.npmjs.com/package/release-it).
 
@@ -136,6 +141,16 @@ this command:
 ```
 npm run release
 ```
+
+# NPM Scripts
+
+| Script            |                                                                               |
+| ----------------- | ----------------------------------------------------------------------------- |
+| `npm run test`    | Runs all unit tests from the command line.                                    |
+| `npm run build`   | Builds the project into the `lib` directory.                                  |
+| `npm run doc`     | Builds the README file from the `doc` directory.                              |
+| `npm run package` | Runs `test`, `build`, and `doc` to exercise your full packaging process.      |
+| `npm run release` | Packages your code, creates a GitHub release, and publishes your code to NPM. |
 
 # Common Tasks
 
