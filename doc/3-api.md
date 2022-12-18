@@ -1,0 +1,14 @@
+# API Documentation
+
+<a name="foo"></a>
+
+## foo(value) ⇒ <code>any</code>
+Returns whatever value is passed.
+
+**Kind**: global function  
+**Returns**: <code>any</code> - Whatever value it was passed.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| value | <code>any</code> | Any value. |
+

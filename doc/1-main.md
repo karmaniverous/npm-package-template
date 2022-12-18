@@ -478,36 +478,3 @@ build error.
 **This template includes
 [`@babel/plugin-syntax-import-assertions`](https://www.npmjs.com/package/@babel/plugin-syntax-import-assertions),
 which adds support for import assertions to Babel.**
-
-# Command Line Interface
-
-```text
-Usage: mycli [options]
-
-Foos your bar.
-
-Options:
-  -b, --bar <string>  foo what?
-  -v, --version       display package version
-  -h, --help          display help for command
-```
-
-# API Documentation
-
-<a name="foo"></a>
-
-## foo(value) ⇒ <code>any</code>
-Returns whatever value is passed.
-
-**Kind**: global function  
-**Returns**: <code>any</code> - Whatever value it was passed.  
-
-| Param | Type | Description |
-| --- | --- | --- |
-| value | <code>any</code> | Any value. |
-
-
----
-
-See more great templates on
-[my GitHub Profile](https://github.com/karmaniverous)!
