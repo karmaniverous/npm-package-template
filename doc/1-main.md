@@ -26,6 +26,11 @@ features:
 - Code formatting at every save & paste with
   [`prettier`](https://www.npmjs.com/package/prettier).
 
+- Automated documentation of your API with
+  [`jsdoc-to-markdown`](https://www.npmjs.com/package/jsdoc-to-markdown) and
+  assembly of your README with
+  [`concat-md`](https://www.npmjs.com/package/concat-md).
+
 - One-button release to GitHub & publish to NPM with
   [`release-it`](https://www.npmjs.com/package/release-it).
 
