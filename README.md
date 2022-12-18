@@ -190,15 +190,15 @@ assertion syntax.
 
 The default configuration will recognize any file as a test file that...
 
-- has a `.test.*js*` extension (i.e. `.test.cjs`, `.test.js`, `.test.mjs`, or
-  `.test.ts`).
-- is not located in `node_modules`.
+- has `.test.` just before its file name extension (i.e. `example.test.js`).
+- is not located in the `node_modules` or `lib` directories.
 
 The sample code packages tests next to the source code they exercise. If you
 prefer to segregate your tests into a directory outside [`src`](./src/) (e.g.
 `test`), that will work as well.
 
-Either way, all test files will be excluded from the build.
+Either way, all test files meeting the above conditions will be excluded from
+the build.
 
 To enable `mocha`-specific linting in your test files, add the following
 directive at the top of every test file:

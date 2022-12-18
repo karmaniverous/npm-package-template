@@ -60,7 +60,7 @@
     "require": [
       "@babel/register"
     ],
-    "spec": "**/*.test.*js*"
+    "spec": "**/*.test.!(*.*)"
   },
   "release-it": {
     "github": {
@@ -71,7 +71,7 @@
     }
   },
   "scripts": {
-    "build": "rimraf ./lib && babel src -d lib --ignore **/*.test.cjs,**/*.test.js,**/*.test.mjs,**/*.test.ts",
+    "build": "rimraf ./lib && babel src -d lib --config-file ./build.config.js",
     "release": "dotenv -c -- release-it",
     "test": "mocha"
   }
