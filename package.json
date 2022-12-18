@@ -75,10 +75,10 @@
     }
   },
   "scripts": {
+    "test": "mocha",
     "build": "rimraf ./lib && babel src -d lib --config-file ./build.config.js",
     "doc": "jsdoc2md -c doc/jsdoc.config.json -f src/**/*.* -t doc/api-template.hbs > doc/3-api.md && concat-md doc --hide-anchor-links > README.md",
     "package": "npm run test && npm run build && npm run doc",
-    "release": "npm run package && dotenv -c -- release-it",
-    "test": "mocha"
+    "release": "npm run package && dotenv -c -- release-it"
   }
 }
