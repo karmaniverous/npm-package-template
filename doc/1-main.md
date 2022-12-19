@@ -34,5 +34,9 @@ features:
 - One-button release to GitHub & publish to NPM with
   [`release-it`](https://www.npmjs.com/package/release-it).
 
-[Click here](https://karmanivero.us/blog/npm-package-template/) for full
-documentation & instructions!
+**[Click here](https://karmanivero.us/blog/npm-package-template/) for full
+documentation & instructions!**
+
+_If you want to create a React component in an NPM package, use my
+[React Component NPM Package Template](https://github.com/karmaniverous/react-component-npm-package-template)
+instead!_

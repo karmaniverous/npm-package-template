@@ -18,13 +18,16 @@
   "description": "An ES6 NPM package project template featuring a CLI, test support, automated API docs, release management & more!",
   "homepage": "https://github.com/karmaniverous/npm-package-template#readme",
   "keywords": [
-    "testing",
-    "template",
-    "npm",
-    "package",
-    "mocha",
     "chai",
-    "release"
+    "docs",
+    "es6",
+    "javascript",
+    "npm",
+    "mocha",
+    "package",
+    "release",
+    "testing",
+    "template"
   ],
   "license": "BSD-3-Clause",
   "dependencies": {
