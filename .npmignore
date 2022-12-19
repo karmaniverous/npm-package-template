@@ -2,3 +2,5 @@ src/
 test/
 .vscode/
 .babelrc
+*.local
+*.local.template
