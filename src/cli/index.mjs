@@ -1,9 +1,5 @@
 #!/usr/bin/env node
 
-// Load environment variables.
-import dotenv from 'dotenv';
-dotenv.config();
-
 // Import package exports.
 import { foo } from '../export/index.mjs';
 
