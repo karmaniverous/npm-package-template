@@ -1,1 +1,1 @@
-export { default as foo } from './foo/foo.mjs';
+export { foo } from './foo/foo.mjs';

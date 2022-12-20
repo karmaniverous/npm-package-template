@@ -1,5 +1,9 @@
 # API Documentation
 
+```js
+import { foo } from '@karmaniverous/block-refresh`;
+```
+
 <a name="foo"></a>
 
 ## foo(value) ⇒ <code>any</code>

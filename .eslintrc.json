@@ -9,6 +9,7 @@
     "plugin:mocha/recommended",
     "plugin:promise/recommended"
   ],
+  "ignorePatterns": ["/lib/**/*.*"],
   "parser": "@babel/eslint-parser",
   "parserOptions": {
     "ecmaVersion": "latest",

@@ -5,7 +5,7 @@ import chai from 'chai';
 chai.should();
 
 // subject imports
-import foo from './foo.mjs';
+import { foo } from './foo.mjs';
 
 describe('foo', function () {
   it('returns default', function () {
