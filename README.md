@@ -57,7 +57,7 @@ Options:
 # API Documentation
 
 ```js
-import { foo } from '@karmaniverous/block-refresh`;
+import { foo } from '@karmaniverous/npm-package-template`;
 ```
 
 <a name="foo"></a>
