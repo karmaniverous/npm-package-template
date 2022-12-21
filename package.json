@@ -60,9 +60,6 @@
     ".": {
       "import": "./lib/index.js",
       "require": "./dist/default/lib/index.js"
-    },
-    "./unreleased": {
-      "require": "./dist/unreleased/lib/index.js"
     }
   },
   "mocha": {
@@ -86,7 +83,7 @@
   "scripts": {
     "lint": "eslint lib/**",
     "test": "mocha",
-    "build": "babel lib -d dist/default/lib --delete-dir-on-start --config-file ./dist/default/.babelrc && babel lib -d dist/unreleased/lib --delete-dir-on-start --config-file ./dist/unreleased/.babelrc",
+    "build": "babel lib -d dist/default/lib --delete-dir-on-start --config-file ./dist/default/.babelrc",
     "doc": "jsdoc2md -c doc/jsdoc.config.json -f lib/**/*.* -t doc/api-template.hbs > doc/3-api.md && concat-md doc --hide-anchor-links > README.md",
     "package": "npm run lint && npm run test && npm run build && npm run doc",
     "release": "npm run package && dotenv -c -- release-it"
