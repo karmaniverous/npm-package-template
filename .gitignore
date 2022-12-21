@@ -124,5 +124,4 @@ dist
 
 # custom
 node_modules
-dist
 *.local
