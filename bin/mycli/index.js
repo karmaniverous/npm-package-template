@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // Import package exports.
-import { foo } from '../export/index.mjs';
+import { foo, packageInfo } from '@karmaniverous/npm-package-template';
 
 // Create CLI.
 import { program } from 'commander';
@@ -19,5 +19,5 @@ program.parse();
 const { bar, version } = program.opts();
 
 // Execute CLI logic.
-if (version) console.log(process.env.NODE_PACKAGE_VERSION);
+if (version) console.log(packageInfo.version);
 else console.log(`foo ${foo(bar)}!`);
