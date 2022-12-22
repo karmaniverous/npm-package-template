@@ -3,15 +3,17 @@
 You wrote a sweet piece of code! Releasing it on [NPM](https://www.npmjs.com/)
 seems like the obvious next step. Right?
 
-Try it. Not as easy to do from scratch as you might think.
+_Try it!_ Not as easy to do as you might think. At high quality. From scratch.
 
 So here's a plug-and-play NPM package template that offers the following
 features:
 
-- Support for the latest ES6 goodies with
+- Tree-shakable support for the latest ES6 goodies with
   [`eslint`](https://www.npmjs.com/package/eslint) _uber alles_.
 
-- A command line interface for your widget with
+- CJS distributions targeting specific browser support scenarios.
+
+- Command line interfaces for your widget with
   [`commander`](https://www.npmjs.com/package/commander).
 
 - Automated [`lodash`](https://www.npmjs.com/package/lodash) cherry-picking with
@@ -21,7 +23,9 @@ features:
   [`chai`](https://www.npmjs.com/package/chai) for testing, with examples, and a
   sweet testing console.
 
-- Secure environment-variable access to [`package.json`](./package.json) data.
+- In-code access to
+  [`package.json`](https://github.com/karmaniverous/npm-package-template/blob/main/package.json)
+  data, with no warnings to ignore.
 
 - Code formatting at every save & paste with
   [`prettier`](https://www.npmjs.com/package/prettier).
