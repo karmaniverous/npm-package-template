@@ -54,7 +54,7 @@
     "jsdoc-to-markdown": "^8.0.0",
     "mocha": "^10.2.0",
     "prettier": "^2.8.1",
-    "release-it": "^15.5.1"
+    "release-it": "^15.6.0"
   },
   "exports": {
     ".": {
