@@ -33,7 +33,9 @@
   "dependencies": {
     "commander": "^9.4.1",
     "dotenv": "^16.0.3",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "pkg-dir": "^7.0.0",
+    "slash": "^5.0.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.19.3",

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 // Import package exports.
-import { foo, PACKAGE_INFO } from '@karmaniverous/npm-package-template';
+import { foo, packageInfo } from '@karmaniverous/npm-package-template';
 
 // Create CLI.
 import { program } from 'commander';
@@ -19,5 +19,5 @@ program.parse();
 const { bar, version } = program.opts();
 
 // Execute CLI logic.
-if (version) console.log(PACKAGE_INFO.version);
+if (version) console.log((await packageInfo()).version);
 else console.log(`foo ${foo(bar)}!`);
