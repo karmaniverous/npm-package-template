@@ -82,7 +82,7 @@
     }
   },
   "scripts": {
-    "lint": "eslint lib/**",
+    "lint": "eslint lib/** bin/**",
     "test": "mocha",
     "build": "babel lib -d dist/default/lib --delete-dir-on-start --config-file ./dist/default/.babelrc",
     "doc": "jsdoc2md -c doc/jsdoc.config.json -f lib/**/*.* -t doc/api-template.hbs > doc/3-api.md && concat-md doc --hide-anchor-links > README.md",
