@@ -3,7 +3,7 @@
   "bin": {
     "mycli": "bin/mycli/index.js"
   },
-  "version": "0.5.7",
+  "version": "0.5.8",
   "publishConfig": {
     "access": "public"
   },
