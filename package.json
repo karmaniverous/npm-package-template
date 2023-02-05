@@ -32,7 +32,6 @@
   "license": "BSD-3-Clause",
   "dependencies": {
     "commander": "^9.4.1",
-    "dotenv": "^16.0.3",
     "lodash": "^4.17.21"
   },
   "devDependencies": {
