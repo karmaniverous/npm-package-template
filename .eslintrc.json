@@ -21,5 +21,9 @@
     "sourceType": "module"
   },
   "plugins": ["mocha", "promise"],
-  "rules": { "mocha/no-top-level-hooks": "off" }
+  "rules": {
+    "jsdoc/check-tag-names": "off",
+    "mocha/no-top-level-hooks": "off"
+  },
+  "settings": { "jsdoc": { "mode": "permissive" } }
 }
