@@ -31,6 +31,7 @@
   ],
   "license": "BSD-3-Clause",
   "dependencies": {
+    "@karmaniverous/get-dotenv": "^3.1.16",
     "commander": "^11.1.0",
     "lodash": "^4.17.21"
   },
@@ -41,11 +42,12 @@
     "@babel/plugin-syntax-import-assertions": "^7.22.5",
     "@babel/preset-env": "^7.23.2",
     "@babel/register": "^7.22.15",
-    "@karmaniverous/get-dotenv": "^3.1.16",
     "@types/node": "^20.8.6",
+    "auto-changelog": "^2.4.0",
     "babel-plugin-lodash": "^3.3.4",
     "chai": "^4.3.10",
     "concat-md": "^0.5.1",
+    "crlf": "^1.1.1",
     "eslint": "^8.51.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-jsdoc": "^46.8.2",
@@ -74,8 +76,26 @@
     "spec": "./**/*.test.!(*.*)"
   },
   "release-it": {
+    "git": {
+      "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs",
+      "requireBranch": "main",
+      "commitMessage": "chore: release v${version}"
+    },
     "github": {
       "release": true
+    },
+    "hooks": {
+      "after:init": [
+        "npm run lint",
+        "npm run test",
+        "npm run build",
+        "npm run doc"
+      ],
+      "after:release": [
+        "git switch -c release/${version}",
+        "git push -u origin release/${version}",
+        "git switch main"
+      ]
     },
     "npm": {
       "publish": true
@@ -83,11 +103,10 @@
   },
   "scripts": {
     "build": "babel lib -d dist/default/lib --delete-dir-on-start --config-file ./dist/default/.babelrc",
-    "doc": "jsdoc2md -c doc/jsdoc.config.json -f lib/**/*.* -t doc/api-template.hbs > doc/3-api.jsdoc2.md && concat-md doc --hide-anchor-links > README.md",
+    "doc": "jsdoc2md -c doc/jsdoc.config.json -f lib/**/*.* -t doc/lib-template.hbs > doc/3-lib.jsdoc2.md && concat-md doc --hide-anchor-links > README.md && crlf --set=CRLF README.md",
     "lint": "eslint lib/** bin/**",
-    "prerelease": "npm run lint && npm run test && npm run build && npm run doc",
     "release": "release-it",
-    "test": "getdotenv -c \"mocha\" -p ./ ./env -d dev -y ./env/dynamic.js"
+    "test": "node ./bin/mycli -c \"mocha\""
   },
   "type": "module"
 }
