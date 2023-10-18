@@ -1,21 +1,27 @@
 #!/usr/bin/env node
 
-// Import package exports.
-import { foo } from '@karmaniverous/npm-package-template';
+// npm imports
+import { getDotenvCli } from '@karmaniverous/get-dotenv';
+import fs from 'fs-extra';
+import { dirname, resolve } from 'path';
+import { fileURLToPath } from 'url';
 
-// Create CLI.
-import { program } from 'commander';
+// lib imports
+import foo from './foo.js';
 
-// CLI description.
-program.name('mycli');
-program.description('Foos your bar.');
+// Load default options.
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const cliDefaultOptionsCustomPath = resolve(
+  __dirname,
+  '../../getdotenv.config.json'
+);
 
-// CLI options.
-program.option('-b, --bar <string>', 'foo what?');
+const cliDefaultOptionsCustom = (await fs.exists(cliDefaultOptionsCustomPath))
+  ? JSON.parse(await fs.readFile(cliDefaultOptionsCustomPath))
+  : {};
 
-// Parse CLI options from command line.
-program.parse();
-const { bar } = program.opts();
+const cli = getDotenvCli({
+  ...cliDefaultOptionsCustom,
+}).addCommand(foo);
 
-// Execute CLI logic.
-console.log(`foo ${foo(bar)}!`);
+await cli.parseAsync();
